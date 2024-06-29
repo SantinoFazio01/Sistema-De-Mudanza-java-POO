@@ -1,0 +1,50 @@
+@startuml
+class Producto {
+- double peso
+- Dimension dimension
+- String nombre
+- boolean fragil
+~ <<Create>> Producto(double,Dimension,String,boolean)
++ double getPeso()
++ void setPeso(double)
++ Dimension getDimension()
++ void setDimension(Dimension)
++ String getNombre()
++ void setNombre(String)
++ boolean isFragil()
++ void setFragil(boolean)
+}
+class Dimension {
+~ double altura
+~ double profundidad
+~ double ancho
++ <<Create>> Dimension(double,double,double)
++ double getAltura()
++ void setAltura(double)
++ double getProfundidad()
++ void setProfundidad(double)
++ double getAncho()
++ void setAncho(double)
+}
+class Transporte {
+- ArrayList<Transporte> transportables
+- double capacidadMaxima
+- double capacida
+- Dimension dimension
+- int cantidadMaxima
+~ <<Create>> Transporte(double,Dimension,int)
++ ArrayList<Transporte> getTransportables()
++ void setTransportables(ArrayList<Transporte>)
++ double getCapacidadMaxima()
++ void setCapacidadMaxima(double)
++ double getCapacida()
++ void setCapacida(double)
++ Dimension getDimension()
++ void setDimension(Dimension)
++ int getCantidadMaxima()
++ void setCantidadMaxima(int)
+}
+class Main {
++ {static} void main(String[])
+}
+@enduml
